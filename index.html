@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game.club | Игровой клуб в Москве</title>
+    <meta
+      name="description"
+      content="game.club — игровой клуб в Москве. Бронирование ПК, контакты и карта."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;700;800&family=Onest:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-grid"></div>
+      <div class="bg-orb orb-left"></div>
+      <div class="bg-orb orb-right"></div>
+
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">G/C</div>
+          <div>
+            <p class="eyebrow">Игровой клуб</p>
+            <h1 class="brand-title">game.club</h1>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="#booking">Бронь ПК</a>
+          <a href="#contacts">Контакты</a>
+          <a href="#location">Карта</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <h2>Бронируй своё место в <span>game.club</span></h2>
+            <p class="hero-text">
+              Компьютерный клуб в Москве. Выбери ПК, время и оформи бронь за минуту.
+            </p>
+            <div class="hero-actions">
+              <a class="cta-button" href="#booking">НАЧАТЬ</a>
+              <div class="stat-card">
+                <strong>24/7</strong>
+                <span>игровые места и ночные сессии</span>
+              </div>
+            </div>
+            <div class="hero-highlights">
+              <div class="highlight">
+                <strong>RTX</strong>
+                <span>Высокий FPS</span>
+              </div>
+              <div class="highlight">
+                <strong>Bootcamp</strong>
+                <span>Командные места рядом</span>
+              </div>
+              <div class="highlight">
+                <strong>Ночь</strong>
+                <span>Пакеты до утра</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="controller-stage">
+              <div class="controller-glow"></div>
+              <img
+                class="controller-image"
+                src="./assets/gamepad1.png"
+                alt="Игровой геймпад Xbox"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-strip">
+          <article class="feature-card">
+            <span>01</span>
+            <h3>Быстрые ПК</h3>
+            <p>Современные сборки для стабильной игры.</p>
+          </article>
+          <article class="feature-card">
+            <span>02</span>
+            <h3>Удобная бронь</h3>
+            <p>Выбор даты, времени и конкретного места.</p>
+          </article>
+          <article class="feature-card">
+            <span>03</span>
+            <h3>Связь сразу</h3>
+            <p>Telegram, почта и телефон администратора.</p>
+          </article>
+        </section>
+
+        <section class="booking-section" id="booking">
+          <div class="section-heading">
+            <p class="eyebrow">Бронирование</p>
+            <h2>Выбери ПК и оформи аренду</h2>
+            <p>
+              Зелёный цвет — свободно, красный — занято.
+            </p>
+          </div>
+
+          <div class="booking-layout">
+            <form class="booking-form" id="booking-form">
+              <label>
+                <span>Имя</span>
+                <input type="text" id="booking-name" maxlength="40" placeholder="Ваше имя" required />
+              </label>
+              <label>
+                <span>Телефон</span>
+                <input
+                  type="tel"
+                  id="booking-phone"
+                  inputmode="tel"
+                  placeholder="+7 (___) ___-__-__"
+                  required
+                />
+              </label>
+              <label>
+                <span>Тариф</span>
+                <select id="booking-plan">
+                  <option value="hourly">Старт • 150 ₽ / час</option>
+                  <option value="prime">Прайм • 650 ₽ / 5 часов</option>
+                  <option value="night">Ночной режим • 990 ₽ / ночь</option>
+                </select>
+              </label>
+              <label>
+                <span>Дата</span>
+                <input type="date" id="booking-date" required />
+              </label>
+              <label>
+                <span>Время начала</span>
+                <input type="time" id="booking-time" required />
+              </label>
+              <label>
+                <span>Длительность</span>
+                <select id="booking-duration">
+                  <option value="1">1 час</option>
+                  <option value="2">2 часа</option>
+                  <option value="3">3 часа</option>
+                  <option value="5">5 часов</option>
+                </select>
+              </label>
+              <label>
+                <span>PIN-код</span>
+                <input
+                  type="password"
+                  id="booking-pin"
+                  inputmode="numeric"
+                  minlength="4"
+                  maxlength="6"
+                  placeholder="Например, 2407"
+                  required
+                />
+              </label>
+
+              <div class="selected-slot" id="selected-slot">
+                Выберите свободный ПК на схеме справа.
+              </div>
+              <div class="price-preview" id="price-preview">Итог: 150 ₽</div>
+
+              <button type="submit" class="submit-button">Подтвердить бронь</button>
+              <p class="form-note">
+                Брони сохраняются в браузере на этом устройстве.
+              </p>
+            </form>
+
+            <div class="pc-panel">
+              <div class="pc-panel-head">
+                <h3>Схема мест</h3>
+                <div class="legend">
+                  <span><i class="dot free"></i> Свободно</span>
+                  <span><i class="dot busy"></i> Занято</span>
+                </div>
+              </div>
+              <div class="pc-grid" id="pc-grid"></div>
+              <div class="booking-history" id="booking-history"></div>
+            </div>
+          </div>
+
+          <div class="result-card" id="booking-result" aria-live="polite"></div>
+        </section>
+
+        <section class="pricing-section">
+          <div class="section-heading">
+            <p class="eyebrow">Тарифы</p>
+            <h2>Пакеты для коротких и длинных сессий</h2>
+          </div>
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <p>Старт</p>
+              <strong>150 ₽ / час</strong>
+              <span>Короткая игра</span>
+            </article>
+            <article class="pricing-card accent">
+              <p>Прайм</p>
+              <strong>650 ₽ / 5 часов</strong>
+              <span>Самый удобный пакет</span>
+            </article>
+            <article class="pricing-card">
+              <p>Ночной режим</p>
+              <strong>990 ₽ / ночь</strong>
+              <span>С вечера до утра</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="contacts-section" id="contacts">
+          <div class="section-heading">
+            <p class="eyebrow">Контакты</p>
+            <h2>Связь с администратором</h2>
+          </div>
+          <div class="contacts-grid">
+            <a class="contact-card" href="https://t.me/wowisoa" target="_blank" rel="noreferrer">
+              <span>Telegram</span>
+              <strong>@wowisoa</strong>
+            </a>
+            <a class="contact-card" href="mailto:emiladiev22@gmail.com">
+              <span>Gmail</span>
+              <strong>emiladiev22@gmail.com</strong>
+            </a>
+            <a class="contact-card" href="tel:+79991234761">
+              <span>Телефон</span>
+              <strong>+7 (999) 123-47-61</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="map-section" id="location">
+          <div class="section-heading">
+            <p class="eyebrow">Локация</p>
+            <h2>Москва, Россия</h2>
+            <p>Открывай маршрут через Google Maps.</p>
+          </div>
+          <div class="map-frame">
+            <iframe
+              title="Карта Москвы"
+              src="https://www.google.com/maps?q=Moscow,Russia&z=11&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase-config.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

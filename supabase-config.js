@@ -1,0 +1,2 @@
+window.GAMECLUB_SUPABASE_URL = "";
+window.GAMECLUB_SUPABASE_ANON_KEY = "";
