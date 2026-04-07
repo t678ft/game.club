@@ -96,9 +96,16 @@ a {
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
   margin-bottom: 44px;
+}
+
+.topbar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
 }
 
 .brand-wrap {
@@ -145,6 +152,27 @@ a {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+.top-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.top-contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-contact-icon {
+  color: var(--accent);
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .topnav a {
@@ -627,6 +655,12 @@ a {
   .pc-panel-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .topbar-right,
+  .top-contacts {
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .hero {
